@@ -1,58 +1,61 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html class="no-js" lang="zxx">
 <head>
-    <title>BurritoCraft - Games - The HTML Project SL</title> <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/7784/7784482.png">
-</head>
-
-<body>
-    
-</body>
-      
-    <head>
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/7784/7784482.png">
+    <meta name="robots" content="noindex, follow" />
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>BurritoCraft - Games - The HTML Project SL</title>
     <style>
+        .container {
+            display: flex;
+            justify-content: center;
+        }
         .footer {
-            position: right;
-            left: 0;
-            bottom: 0;
-            width: 100%;
+            position: sticky;
+            top: 0;
+            width: 20%;
             background-color: grey;
             color: white;
             text-align: center;
         }
-    </style><!DOCTYPE html>
-<html>
-<head>
-    <title>BurritoCraft - Games - The HTML Project SL</title> 
-    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/7784/7784482.png">
-    <script>
-        function goFullscreen(id) {
-            var element = document.getElementById(id);
-            if (element.mozRequestFullScreen) {
-                element.mozRequestFullScreen();
-            } else if (element.webkitRequestFullScreen) {
-                element.webkitRequestFullScreen();
-            }
+        .game {
+            width: 90%;
         }
-    </script>
+    </style>
 </head>
 <body>
     <h2>BurritoCraft</h2>
-    <iframe id="myframe" height="1070" width="540" src="https://thehtmlproject.github.io/allmygames/minecraft-18" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
-    <button onclick="goFullscreen('myframe')">Fullscreen</button>
-
-    
-<br>
-    <br>
-
-
-</head>
-<body>
-
-<div class="footer">
-    
-    <p><a href="dashboard.html" style="color: white;">Back to Dashboard</a></p>
-    <p><a href="https://forms.office.com/Pages/ResponsePage.aspx?id=PE1WzVoeIkqjzr5jFs7J_7rxW38_NJVGgrFkHwKPmghUQ0hWV0xIMVVaVU1YWTM5MTNCRjUySllNWi4u" style="color: white;">Report Bug</a></p>
-</div>
-
+    <div class="container">
+        <!-- iframe Game -->
+        <div class="game">
+            <iframe class="gm-iframe" id="gm-area" src="https://thehtmlproject.github.io/allmygames/minecraft-18" width="1070" height="540" scrolling="none" frameborder="0" allowfullscreen></iframe>
+            <div style="padding-top: 10px;"> 
+                <button class="btn theme-btn-1 btn-effect-1 text-uppercase" onclick="openFullscreen();">Full Screen</button>
+            </div>
+            <script>
+                var elem = document.getElementById("gm-area");
+                function openFullscreen() {
+                    if (elem.requestFullscreen) {
+                        elem.requestFullscreen();
+                    } else if (elem.webkitRequestFullscreen) { /* Safari */
+                        elem.webkitRequestFullscreen();
+                    } else if (elem.msRequestFullscreen) { /* IE11 */
+                        elem.msRequestFullscreen();
+                    }
+                }
+            </script>
+            <p>
+     Finally found it!
+            </p>
+        </div>
+        <!-- End iframe Game -->
+        <!-- Footer -->
+        <div class="footer">
+            <p><a href="dashboard.html" style="color: white;">Back to Dashboard</a></p>
+            <p><a href="https://forms.office.com/Pages/ResponsePage.aspx?id=PE1WzVoeIkqjzr5jFs7J_7rxW38_NJVGgrFkHwKPmghUQ0hWV0xIMVVaVU1YWTM5MTNCRjUySllNWi4u" style="color: white;">Report Bug</a></p>
+        </div>
+        <!-- End Footer -->
+    </div>
 </body>
 </html>
