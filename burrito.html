@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html class="no-js" lang="zxx">
 <head>
@@ -29,22 +30,12 @@
     <div class="container">
         <!-- iframe Game -->
         <div class="game">
-            <iframe class="gm-iframe" id="gm-area" width="1070" height="540" scrolling="none" frameborder="0" allowfullscreen></iframe>
+            <iframe class="gm-iframe" id="gm-area" src="https://thehtmlproject.github.io/burritocraft/Minecraft/web/" width="1070" height="540" scrolling="none" frameborder="0" allowfullscreen></iframe>
             <div style="padding-top: 10px;"> 
                 <button class="btn theme-btn-1 btn-effect-1 text-uppercase" onclick="openFullscreen();">Full Screen</button>
             </div>
             <script>
                 var elem = document.getElementById("gm-area");
-                var iframeSource = ""; // Variable to store the iframe source URL
-
-                // Load the iframe source URL from a file
-                fetch('iframe_source.txt')
-                    .then(response => response.text())
-                    .then(data => {
-                        iframeSource = data;
-                        elem.src = iframeSource; // Set the iframe source
-                    });
-
                 function openFullscreen() {
                     if (elem.requestFullscreen) {
                         elem.requestFullscreen();
@@ -56,7 +47,7 @@
                 }
             </script>
             <p>
-                Finally found it!
+     Finally found it!
             </p>
         </div>
         <!-- End iframe Game -->
