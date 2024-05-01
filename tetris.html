@@ -1,6 +1,3 @@
-
-
-
 <!doctype html>
 <html class="no-js" lang="zxx">
 <head>
@@ -47,11 +44,17 @@
                         elem.msRequestFullscreen();
                     }
                 }
-                 window.addEventListener('load', openFullscreen);
+                // Trigger fullscreen on load
+                window.addEventListener('load', function() {
+                    // Check if the fullscreen API is supported
+                    if (document.fullscreenEnabled || 
+                        document.webkitFullscreenEnabled || 
+                        document.msFullscreenEnabled) {
+                        openFullscreen();
+                    }
+                });
             </script>
-            <p>
-Germomino likes it
-</p>
+            <p>Germomino likes it</p>
         </div>
         <!-- End iframe Game -->
         <!-- Footer -->
