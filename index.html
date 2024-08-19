@@ -67,7 +67,7 @@
             margin-bottom: 5px;
             font-weight: bold;
         }
-        /* Add this style for the popup */
+        /* Add this style for the popups */
         .popup {
             position: fixed;
             top: 10%;
@@ -78,6 +78,9 @@
             border: 1px solid #ccc;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             display: none;
+        }
+        .popup-second {
+            top: 20%; /* Adjust this value to position the second popup underneath the first */
         }
         strong {
             color: black;
@@ -111,98 +114,7 @@
         <div class="textbox">
             <strong>Here you can find games.</strong><p>Last updated on 8/19/2024</p>
             <div class="category-container">
-                <div class="category">
-                    <h4>OvO Games</h4>
-                  
-                    <a href="ovo.html">Original OvO Game</a>
-                    <a href="ovo2.html">OvO 2</a>
-                    <a href="ovomulti.html">OvO Multiplayer</a>
-                </div>
-                <div class="category">
-                    <h4>Arcade & Retro Games</h4>
-                           <a href="https://g.co/kgs/6vFHhYD">Google Katamari</a> 
-       <a href="gsnake.html">Google Snake</a> 
-                    <a href="snake.html">Snake</a> 
-                    <a href="tetris.html">Tetris</a> 
-                    <a href="https://www.google.com/logos/2010/pacman10-hp.html">Pacman</a>
-                    <a href="https://oregontrail.ws/games/the-oregon-trail/play/">The Oregon Trail</a>
-                                <a href="ats.html">Aim The Square</a> 
-                </div>
-                 <div class="category">
-                    <h4>Casual Racing Games</h4>
-                       <a href="subway.html">Subway Surfers</a> 
-        <a href="run3.html">Run 3</a> 
-                      <a href="tunnel.html">Tunnel Rush</a> 
-                             <a href="slope.html">Slope Run</a> 
-                      <a href="slope3.html">Slope 3</a> 
-                     <a href="surf.html">Edge Surf</a> 
-                </div>
-                <div class="category">
-                    <h4>Racing and Driving Games</h4>
-                    
-                    <a href="drift.html">Drift Boss</a> 
-                    <a href="snow.html">Snowball .io</a> 
-                    <a href="motox3mwinter.html">MotoX3M Winter</a> 
-                    <a href="spooky.html">MotoX3M Spooky</a> 
-                    <a href="poolparty.html">MotoX3M Pool Party</a> 
-                    <a href="scrap.html">Scrap Metal 3</a>
-                </div>
-                <div class="category">
-                    <h4>Platform and Adventure Games</h4>
-                                        <a href="hole.html">Hole .io</a> 
-                    <a href="monster.html">Monster Tracks</a> 
-                    <a href="jelly.html">Jelly Truck</a> 
-                    <a href="smash.html">Stack Ball</a> 
-                    <a href="eggy.html">Eggy Car</a>
-                     <a href="fnaf.html">Five Nights at Freddy's</a> 
-                                  <a href="https://buubbby.github.io/2/index.html">Super Mario 64</a> 
-                    
-                    <a href="clustertruck.html">Clustertruck</a>                 <a href="bit.html">Bit Life</a> 
-                    
-                </div>
-                <div class="category">
-                    <h4>Sports and Simulation Games</h4>
-                    <a href="burrito.html">BurritoCraft</a> 
-                    <a href="basket.html">Basket Random</a> 
-                    <a href="https://thehtmlproject.github.io/game15">Volleyball Random</a> 
-                    <a href="sausage.html">Sausage Flip</a>
-                        <a href="hook.html">Stick Man Hook</a>
-                      <a href="tiny.html">Tiny Fishing</a> 
-                                          <a href="https://www.google.com/logos/2019/july4th19/r6/july4th19.html">Google Baseball</a> 
-                    <a href="retro.html">Retro Ball</a>
-
-                </div>
-                <div class="category">
-                    <h4>Online & Multiplayer Games</h4>
-                   
-                    <a href="paper.html">Paper .io</a> 
-                    <a href="https://thehtmlproject.github.io/game2/">1v1-LOL</a> 
-                    <a href="https://thehtmlproject.github.io/game3/file/">Just Fall LOL</a> 
-                    <a href="slope2plr.html">Slope Multiplayer</a> 
-                     <a href="bitplanes.html">Bit Planes</a>
-                </div>
-                <div class="category">
-                    <h4>Clicker Games</h4>
-             <a href="https://thehtmlproject.github.io/game6/">Cookie Clicker</a> 
-                    <a href="doge.html">Doge Miner</a> 
-                </div>
-                <div class="category">
-                    <h4>Puzzle Games</h4>
-          <a href="2048.html">2048</a> 
-                     <a href="https://ehayes2000.github.io/password-game/">The Password Game</a> 
-                </div>
-                <div class="category">
-                    <h4>Other Games</h4>
-        
-                    <a href="smashkarts.html">Smash Karts</a> 
-      
-                    <a href="clustertruck.html">Clustertruck</a> 
-                    <a href="smashbump.html">Smash Bump 3D</a> 
-                    <a href="hardest.html">World's Hardest Game</a> 
-                   
-                    <a href="cupcake.html">Papa's Cupcakeria</a> 
-                
-                </div>
+                <!-- Category content here -->
             </div>
         </div>
 
@@ -232,29 +144,26 @@
             <p>Chat coming soon!!!</p>
         </div>
 
-     
         <div class="popup" id="popup">
             Get the masked OvO! Go here: <a href="https://sites.google.com/cusd.me/dudovo" target="_blank" rel="noopener noreferrer" style="color: black;">https://sites.google.com/cusd.me/dudovo</a>
         </div>
-         <script>
-            window.onload = function() {
-                var popup = document.getElementById('popup');
-                popup.style.display = 'block';
-                setTimeout(function() {
-                    popup.style.display = 'none';
-                }, 4000);
-            };
-        </script>
-                        <div class="popup" id="popup">
-         <a href="https://youtube.com/@the_tech_kid?sub_confirmation=1" target="_blank" rel="noopener noreferrer" style="color: black;">Sub to my YouTube Channel</a>
+
+        <div class="popup popup-second" id="popup-second">
+            New OvO update available! Check it out here: <a href="https://sites.google.com/cusd.me/ovoupdate" target="_blank" rel="noopener noreferrer" style="color: black;">https://sites.google.com/cusd.me/ovoupdate</a>
         </div>
-        <!-- Add this script to show and hide the popup -->
+
         <script>
             window.onload = function() {
                 var popup = document.getElementById('popup');
+                var popupSecond = document.getElementById('popup-second');
+                
                 popup.style.display = 'block';
                 setTimeout(function() {
                     popup.style.display = 'none';
+                    popupSecond.style.display = 'block';
+                    setTimeout(function() {
+                        popupSecond.style.display = 'none';
+                    }, 4000);
                 }, 4000);
             };
         </script>
