@@ -26,6 +26,13 @@
             border-radius: 8px;
             margin-bottom: 20px;
         }
+        .header img {
+    max-width: 120px; /* Maximum width */
+    height: auto; /* Maintain aspect ratio */
+    max-height: 150px; /* Maximum height */
+    object-fit: contain; /* Ensure the image fits within the box without stretching */
+}
+
         .header {
             background-color: gray;
             color: white;
@@ -204,8 +211,8 @@
         <h3>Other things</h3>
         <div class="category-container">
             <div class="category">
-                <h4>Other things</h4>
-            
+                <h4>Cool Stuff</h4>
+             <a href="https://youtube.com/@the_tech_kid?sub_confirmation=1" target="_blank" rel="noopener noreferrer">Sub to my YouTube</a>
                 <a href="https://thehtmlproject.github.io/allmygames/soundboard">Meme Soundboard</a>
                 <a href="https://sites.google.com/cusd.me/dudovo">Dud OvO</a>
                 <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=PE1WzVoeIkqjzr5jFs7J_7rxW38_NJVGgrFkHwKPmghUNjMxQkoxMlZOQlhFMFFDVEdKN0pYQTZGMS4u">Pruxy Sign-up Form</a>
@@ -225,20 +232,7 @@
             </div>
         </div>
     </div>
-    <div class="popup" id="popup">
-        Get the masked OvO! Go here: <a href="https://sites.google.com/cusd.me/dudovo" target="_blank" rel="noopener noreferrer">https://sites.google.com/cusd.me/dudovo</a>
-        <br><br>
-        <a href="https://youtube.com/@the_tech_kid?sub_confirmation=1" target="_blank" rel="noopener noreferrer">Sub to my YouTube</a>
-    </div>
-    <script>
-        window.onload = function() {
-            var popup = document.getElementById('popup');
-            popup.style.display = 'block';
-            setTimeout(function() {
-                popup.style.display = 'none';
-            }, 4000);
-        };
-    </script>
+  
     <footer>
         <h2>People Count</h2>
         <a href="https://www.digits.net" target="_blank">
