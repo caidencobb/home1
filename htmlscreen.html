@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DVD Screensaver</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            background-color: black;
+        }
+        #icon {
+            position: absolute;
+            width: 175px;
+            height: 175px;
+            background-image: url('Icon.jpeg');
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+    <div id="icon"></div>
+    <script>
+        const icon = document.getElementById('icon');
+        let x = Math.random() * (window.innerWidth - icon.offsetWidth);
+        let y = Math.random() * (window.innerHeight - icon.offsetHeight);
+        let dx = 2, dy = 2;
+
+        function moveIcon() {
+            x += dx;
+            y += dy;
+
+            if (x <= 0 || x + icon.offsetWidth >= window.innerWidth) {
+                dx = -dx;
+            }
+            if (y <= 0 || y + icon.offsetHeight >= window.innerHeight) {
+                dy = -dy;
+            }
+
+            icon.style.left = x + 'px';
+            icon.style.top = y + 'px';
+            requestAnimationFrame(moveIcon);
+        }
+
+        moveIcon();
+    </script>
+</body>
+</html>
