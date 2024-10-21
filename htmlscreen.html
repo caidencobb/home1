@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-        <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/7784/7784482.png">
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/7784/7784482.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML Screensaver - Utilities - The HTML Project</title>
@@ -45,6 +45,36 @@
         }
 
         moveIcon();
+
+        // Prevent screen from sleeping
+        let wakeLock = null;
+
+        async function requestWakeLock() {
+            try {
+                wakeLock = await navigator.wakeLock.request('screen');
+                console.log('Wake Lock is active');
+            } catch (err) {
+                console.error(`${err.name}, ${err.message}`);
+            }
+        }
+
+        // Request wake lock when page loads
+        requestWakeLock();
+
+        // Re-request wake lock when page becomes visible again
+        document.addEventListener('visibilitychange', () => {
+            if (wakeLock !== null && document.visibilityState === 'visible') {
+                requestWakeLock();
+            }
+        });
+
+        // Release wake lock when page unloads
+        window.addEventListener('unload', () => {
+            if (wakeLock !== null) {
+                wakeLock.release();
+                wakeLock = null;
+            }
+        });
     </script>
 </body>
 </html>
